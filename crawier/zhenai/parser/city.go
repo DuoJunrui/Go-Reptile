@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"Study/crawier/engine"
+	"Go-Reptile/crawier/engine"
 	"regexp"
 )
 

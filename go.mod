@@ -1,4 +1,4 @@
-module Study
+module Go-Reptile
 
 go 1.17
 

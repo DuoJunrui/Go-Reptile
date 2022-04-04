@@ -1,13 +1,13 @@
 package parser
 
 import (
-	"Study/crawier/model"
+	"Go-Reptile/crawier/model"
 	"io/ioutil"
 	"testing"
 )
 
 func TestParseProfile(t *testing.T) {
-	contents, err := ioutil.ReadFile("E:\\GolandProjects\\Study\\crawier\\zhenai\\parser\\profile_test_data.html")
+	contents, err := ioutil.ReadFile("profile_test_data.html")
 	if err != nil {
 		panic(err)
 	}

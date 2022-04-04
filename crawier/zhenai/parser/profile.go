@@ -1,9 +1,9 @@
 package parser
 
 import (
-	"Study/crawier/engine"
-	"Study/crawier/fetcher"
-	"Study/crawier/model"
+	"Go-Reptile/crawier/engine"
+	"Go-Reptile/crawier/fetcher"
+	"Go-Reptile/crawier/model"
 	"encoding/json"
 	"regexp"
 )

@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"Study/crawier/engine"
+	"Go-Reptile/crawier/engine"
 	"regexp"
 )
 
@@ -12,7 +12,7 @@ func ParseCityList(contents []byte) engine.ParseResult {
 	matches := re.FindAllSubmatch(contents, -1)
 
 	result := engine.ParseResult{}
-	limit := 10
+	limit := 3
 	for _, m := range matches {
 		result.Items = append(result.Items, "City "+string(m[2]))
 		result.Request = append(result.Request, engine.Request{
