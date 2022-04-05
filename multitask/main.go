@@ -11,8 +11,14 @@ func main() {
 		Scheduler:   &scheduler.QueuedScheduler{},
 		WorkerCount: 10,
 	}
+
+	//concurrentEngine.Run(engine.Request{
+	//	Url:        "https://www.zhenai.com/zhenghun",
+	//	ParserFunc: parser.ParseCityList,
+	//})
+
 	concurrentEngine.Run(engine.Request{
-		Url:        "https://www.zhenai.com/zhenghun",
-		ParserFunc: parser.ParseCityList,
+		Url:        "https://www.zhenai.com/zhenghun/shanghai",
+		ParserFunc: parser.ParseCity,
 	})
 }

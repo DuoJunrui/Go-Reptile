@@ -44,7 +44,7 @@ func Fetch(urlStr string) ([]byte, error) {
 	if resp.StatusCode != http.StatusOK {
 		if http.StatusAccepted == resp.StatusCode {
 			log.Printf("http 202, fetch this url again...")
-			Fetch(newUrl)
+			//Fetch(newUrl)
 		}
 		return nil, fmt.Errorf("wrong status code： %d", resp.StatusCode)
 	}
