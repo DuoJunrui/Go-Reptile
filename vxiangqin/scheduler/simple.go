@@ -1,6 +1,6 @@
 package scheduler
 
-import "Go-Reptile/multitask/engine"
+import "Go-Reptile/vxiangqin/engine"
 
 type SimpleScheduler struct {
 	workerChan chan engine.Request

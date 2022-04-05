@@ -1,9 +1,9 @@
 package main
 
 import (
-	"Go-Reptile/multitask/engine"
-	"Go-Reptile/multitask/scheduler"
-	"Go-Reptile/multitask/zhenai/parser"
+	"Go-Reptile/vxiangqin/engine"
+	"Go-Reptile/vxiangqin/scheduler"
+	"Go-Reptile/vxiangqin/zhenai/parser"
 )
 
 func main() {

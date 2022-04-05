@@ -1,7 +1,7 @@
 package engine
 
 import (
-	"Go-Reptile/multitask/fetcher"
+	"Go-Reptile/vxiangqin/fetcher"
 	"log"
 )
 

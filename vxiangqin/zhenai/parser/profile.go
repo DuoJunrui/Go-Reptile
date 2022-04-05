@@ -1,9 +1,9 @@
 package parser
 
 import (
-	"Go-Reptile/multitask/engine"
-	"Go-Reptile/multitask/fetcher"
-	"Go-Reptile/multitask/model"
+	"Go-Reptile/vxiangqin/engine"
+	"Go-Reptile/vxiangqin/fetcher"
+	"Go-Reptile/vxiangqin/model"
 	"encoding/json"
 	"regexp"
 )

@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"Go-Reptile/crawier/model"
+	"Go-Reptile/multitask/model"
 	"io/ioutil"
 	"testing"
 )
