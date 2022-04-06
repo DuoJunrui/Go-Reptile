@@ -12,12 +12,12 @@ func TestParseCityList(t *testing.T) {
 	}
 	result := ParseCityList(contents)
 
-	const resultSize = 10
+	const resultSize = 362
 	expectedUrl := []string{
-		"http://www.zhenai.com/zhenghun/aba", "http://www.zhenai.com/zhenghun/akesu", "http://www.zhenai.com/zhenghun/alashanmeng",
+		"http://beijing.vxiangqin.com", "http://tianjin.vxiangqin.com", "http://haerbin.vxiangqin.com",
 	}
 	expectedCities := []string{
-		"City 阿坝", "City 阿克苏", "City 阿拉善盟",
+		"City 北京", "City 天津", "City 哈尔滨",
 	}
 
 	if len(result.Requests) != resultSize {

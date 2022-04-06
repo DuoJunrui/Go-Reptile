@@ -15,9 +15,9 @@ var houseRe = regexp.MustCompile(`<div class="m-btn pink" data-v-8b1eac0c>([^<]+
 var carRe = regexp.MustCompile(`<div class="m-btn pink" data-v-8b1eac0c>([^<]+车)</div>`)
 var occupationRe = regexp.MustCompile(`<div class="m-btn purple" data-v-8b1eac0c>月收入:.*?<div class="m-btn purple" data-v-8b1eac0c>([^<]+)</div>`)
 
-func ParseProfile(contents []byte, id, name string) engine.ParseResult {
+func ParseProfile(contents []byte, id string) engine.ParseResult {
 	profile := model.Profile{}
-	profile.Name = name
+	//profile.Name = name
 
 	/*用正则表达式解析html代码*/
 	profile.Data.Weight = extractString(contents, weightRe)

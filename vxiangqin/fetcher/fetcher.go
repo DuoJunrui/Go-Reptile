@@ -10,7 +10,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"strings"
 	"time"
 )
 
@@ -23,7 +22,7 @@ func Fetch(urlStr string) ([]byte, error) {
 	//	return nil, err
 	//}
 	<-rateLimiter
-	newUrl := strings.Replace(urlStr, "http://", "https://", 1)
+	//newUrl := strings.Replace(urlStr, "http://", "https://", 1)
 	cookie, err := ioutil.ReadFile("E:\\GolandProjects\\Go-Reptile\\crawier\\fetcher\\cookie.txt")
 	if err != nil {
 		panic(err)
@@ -31,7 +30,7 @@ func Fetch(urlStr string) ([]byte, error) {
 
 	//  请求目标网页
 	client := &http.Client{}
-	req, _ := http.NewRequest("GET", newUrl, nil)
+	req, _ := http.NewRequest("GET", urlStr, nil)
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
 	req.Header.Add("Cookie", string(cookie))
 	resp, err := client.Do(req)
