@@ -1,23 +1,17 @@
 package model
 
 type Profile struct {
-	Data `json:"data"`
-}
-
-type Data struct {
-	Id         int    `json:"memberID"`
-	Name       string `json:"nickname"`
-	Gender     string `json:"genderString"`
-	Age        int    `json:"age"`
-	Height     string `json:"heightString"`
-	Weight     string
-	Income     string `json:"salaryString"`
-	Marriage   string `json:"marriageString"`
-	Education  string `json:"educationString"`
-	Occupation string
-	Jiguan     string
-	WorkCity   string `json:"workProvinceCityString"`
-	Xinzuo     string
-	House      string
-	Car        string
+	UserId               string `json:"user_id"`
+	Name                 string `json:"name"`
+	Sex                  string `json:"sex"`
+	Age                  string `json:"age"`
+	Marriage             string `json:"marriage"`
+	Height               string `json:"height"`
+	Weight               string `json:"weight"`
+	Income               string `json:"income"`
+	Education            string `json:"education"`
+	Occupation           string `json:"occupation"`
+	House                string `json:"house"`
+	Car                  string `json:"car"`
+	ExpectedMarriageDate string `json:"expected_marriage_date"`
 }

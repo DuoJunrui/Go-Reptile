@@ -5,7 +5,7 @@ import (
 	"regexp"
 )
 
-var profileRe = regexp.MustCompile(`<a href="(http://[a-z]+.vxiangqin.com/u/[0-9]+)" class="mbox">`)
+var profileRe = regexp.MustCompile(`<a href="(http://[a-z]+.vxiangqin.com/u/[0-9]+)" class="mbox"`)
 
 func ParseCity(contents []byte) engine.ParseResult {
 	matches := profileRe.FindAllSubmatch(contents, -1)
