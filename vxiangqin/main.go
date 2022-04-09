@@ -9,7 +9,7 @@ import (
 func main() {
 	concurrentEngine := engine.ConcurrentEngine{
 		Scheduler:   &scheduler.QueuedScheduler{},
-		WorkerCount: 10,
+		WorkerCount: 50,
 	}
 
 	concurrentEngine.Run(engine.Request{
