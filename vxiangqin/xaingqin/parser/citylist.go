@@ -39,6 +39,31 @@ func ParseCityList(contents []byte) engine.ParseResult {
 				ParserFunc: ParseCity,
 			})
 		}
+		// 遍历年龄范围页面
+		//0-20...20-21..21-22...22-23......79-80...80-0
+		for i := 19; i <= 80; i++ {
+			startAge := 0
+			endAge := 0
+			if i == 19 {
+				startAge = 0
+			} else {
+				startAge = i
+			}
+
+			if i == 80 {
+				endAge = 0
+			} else {
+				endAge = i + 1
+			}
+
+			for j := 1; j <= 25; j++ {
+				userPageUrl := string(m[1]) + `/p/user.php?form_mate_sex=0&form_mate_age1=` + strconv.Itoa(startAge) + `&form_mate_age2=` + strconv.Itoa(endAge) + `&form_mate_heigh1=0&form_mate_heigh2=0&m1=0&m2=0&m3=0&areatitle=&form_mate_job=0&form_mate_edu=0&form_mate_love=0&form_mate_house=0&form_mate_pay=0&t=1&areakey=&p=` + strconv.Itoa(j)
+				result.Requests = append(result.Requests, engine.Request{
+					Url:        userPageUrl,
+					ParserFunc: ParseCity,
+				})
+			}
+		}
 		limit--
 		if limit == 0 {
 			break
