@@ -33,7 +33,7 @@ func save(item interface{}) (id string, err error) {
 	}
 
 	resp, err := client.Index().
-		Index("user_profile").
+		Index("userinfo").
 		Type("vxiangqin").
 		BodyJson(item).
 		Do(context.Background())

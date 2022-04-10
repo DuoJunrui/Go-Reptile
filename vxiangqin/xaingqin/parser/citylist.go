@@ -16,7 +16,7 @@ func ParseCityList(contents []byte) engine.ParseResult {
 	for _, m := range matches {
 		result.Items = append(result.Items, "City "+string(m[2]))
 		// 遍历男女混合页面
-		for i := 1; i <= 25; i++ {
+		/*for i := 1; i <= 25; i++ {
 			userPageUrl := string(m[1]) + `/p/user.php?p=` + strconv.Itoa(i)
 			result.Requests = append(result.Requests, engine.Request{
 				Url:        userPageUrl,
@@ -38,7 +38,8 @@ func ParseCityList(contents []byte) engine.ParseResult {
 				Url:        userPageUrl,
 				ParserFunc: ParseCity,
 			})
-		}
+		}*/ //去掉上面重复请求的数据
+
 		// 遍历年龄范围页面
 		//0-20...20-21..21-22...22-23......79-80...80-0
 		for i := 19; i <= 80; i++ {

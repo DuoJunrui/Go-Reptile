@@ -10,9 +10,10 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 )
 
-//var rateLimiter = time.Tick(100 * time.Microsecond)
+var rateLimiter = time.Tick(100 * time.Microsecond)
 
 func Fetch(urlStr string) ([]byte, error) {
 	/*请求容易出现403 Forbidden*/
@@ -21,7 +22,7 @@ func Fetch(urlStr string) ([]byte, error) {
 	//	return nil, err
 	//}
 	//添加请求延迟时间，防止网站拒绝访问
-	//<-rateLimiter
+	<-rateLimiter
 	//newUrl := strings.Replace(urlStr, "http://", "https://", 1)
 	cookie, err := ioutil.ReadFile("E:\\GolandProjects\\Go-Reptile\\crawier\\fetcher\\cookie.txt")
 	if err != nil {
