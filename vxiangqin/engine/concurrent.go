@@ -1,5 +1,7 @@
 package engine
 
+import "Go-Reptile/vxiangqin/model"
+
 type ConcurrentEngine struct {
 	Scheduler   Scheduler
 	WorkerCount int
@@ -33,7 +35,11 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	for {
 		result := <-out
 		for _, item := range result.Items {
-			go func() { e.ItemChan <- item }()
+			//判断item的数据类型，如果是model.Profile，将item加入到ItemChan中,因为save的时候只保存用户数据
+			switch item.(type) {
+			case model.Profile:
+				go func() { e.ItemChan <- item }()
+			}
 		}
 		for _, request := range result.Requests {
 			e.Scheduler.Submit(request)
