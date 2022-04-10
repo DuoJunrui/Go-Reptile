@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"Go-Reptile/multitask/model"
+	"Go-Spider/multitask/model"
 	"io/ioutil"
 	"testing"
 )

@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"Go-Reptile/multitask/engine"
+	"Go-Spider/multitask/engine"
 	"regexp"
 )
 

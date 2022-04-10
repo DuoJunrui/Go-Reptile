@@ -1,9 +1,9 @@
 package parser
 
 import (
-	"Go-Reptile/multitask/engine"
-	"Go-Reptile/multitask/fetcher"
-	"Go-Reptile/multitask/model"
+	"Go-Spider/multitask/engine"
+	"Go-Spider/multitask/fetcher"
+	"Go-Spider/multitask/model"
 	"encoding/json"
 	"regexp"
 )

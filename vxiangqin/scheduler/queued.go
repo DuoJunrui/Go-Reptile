@@ -1,6 +1,6 @@
 package scheduler
 
-import "Go-Reptile/vxiangqin/engine"
+import "Go-Spider/vxiangqin/engine"
 
 type QueuedScheduler struct {
 	requestChan chan engine.Request

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"Go-Reptile/vxiangqin/engine"
-	"Go-Reptile/vxiangqin/persist"
-	"Go-Reptile/vxiangqin/scheduler"
-	"Go-Reptile/vxiangqin/xaingqin/parser"
+	"Go-Spider/vxiangqin/engine"
+	"Go-Spider/vxiangqin/persist"
+	"Go-Spider/vxiangqin/scheduler"
+	"Go-Spider/vxiangqin/xaingqin/parser"
 )
 
 func main() {

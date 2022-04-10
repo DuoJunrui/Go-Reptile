@@ -1,6 +1,6 @@
 package scheduler
 
-import "Go-Reptile/multitask/engine"
+import "Go-Spider/multitask/engine"
 
 type QueuedScheduler struct {
 	requestChan chan engine.Request

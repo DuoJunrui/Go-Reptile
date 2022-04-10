@@ -1,4 +1,4 @@
-module Go-Reptile
+module Go-Spider
 
 go 1.17
 

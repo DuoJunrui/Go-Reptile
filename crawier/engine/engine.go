@@ -1,7 +1,7 @@
 package engine
 
 import (
-	"Go-Reptile/crawier/fetcher"
+	"Go-Spider/crawier/fetcher"
 	"log"
 )
 

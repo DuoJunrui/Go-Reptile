@@ -1,7 +1,7 @@
 package persist
 
 import (
-	"Go-Reptile/vxiangqin/model"
+	"Go-Spider/vxiangqin/model"
 	"context"
 	"encoding/json"
 	"github.com/olivere/elastic/v7"

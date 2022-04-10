@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Go-Reptile/crawier/engine"
-	"Go-Reptile/crawier/zhenai/parser"
+	"Go-Spider/crawier/engine"
+	"Go-Spider/crawier/zhenai/parser"
 )
 
 func main() {

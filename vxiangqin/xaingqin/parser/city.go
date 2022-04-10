@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"Go-Reptile/vxiangqin/engine"
+	"Go-Spider/vxiangqin/engine"
 	"regexp"
 )
 
