@@ -24,21 +24,27 @@ func Fetch(urlStr string) ([]byte, error) {
 	//添加请求延迟时间，防止网站拒绝访问
 	<-rateLimiter
 	//newUrl := strings.Replace(urlStr, "http://", "https://", 1)
-	cookie, err := ioutil.ReadFile("E:\\GolandProjects\\Go-Reptile\\crawier\\fetcher\\cookie.txt")
+	cookie, err := ioutil.ReadFile("E:\\GolandProjects\\Go-Reptile\\vxiangqin\\fetcher\\cookie.txt")
 	if err != nil {
 		panic(err)
 	}
 
 	//  请求目标网页
 	client := &http.Client{}
-	req, _ := http.NewRequest("GET", urlStr, nil)
+	req, err := http.NewRequest("GET", urlStr, nil)
+	if err != nil {
+		// 请求发生异常,只打印不终止
+		fmt.Println(err.Error())
+	}
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
 	req.Header.Add("Cookie", string(cookie))
+
 	resp, err := client.Do(req)
 	if err != nil {
 		// 请求发生异常
 		fmt.Println(err.Error())
 	}
+
 	defer resp.Body.Close() //保证最后关闭Body
 
 	if resp.StatusCode != http.StatusOK {
