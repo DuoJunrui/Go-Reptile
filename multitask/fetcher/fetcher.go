@@ -24,7 +24,7 @@ func Fetch(urlStr string) ([]byte, error) {
 	//}
 	<-rateLimiter
 	newUrl := strings.Replace(urlStr, "http://", "https://", 1)
-	cookie, err := ioutil.ReadFile("E:\\GolandProjects\\Go-Reptile\\crawier\\fetcher\\cookie.txt")
+	cookie, err := ioutil.ReadFile("E:\\GolandProjects\\Go-Spider\\crawier\\fetcher\\cookie.txt")
 	if err != nil {
 		panic(err)
 	}

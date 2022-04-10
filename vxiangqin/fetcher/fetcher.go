@@ -24,7 +24,7 @@ func Fetch(urlStr string) ([]byte, error) {
 	//添加请求延迟时间，防止网站拒绝访问
 	<-rateLimiter
 	//newUrl := strings.Replace(urlStr, "http://", "https://", 1)
-	cookie, err := ioutil.ReadFile("E:\\GolandProjects\\Go-Reptile\\vxiangqin\\fetcher\\cookie.txt")
+	cookie, err := ioutil.ReadFile("E:\\GolandProjects\\Go-Spider\\vxiangqin\\fetcher\\cookie.txt")
 	if err != nil {
 		panic(err)
 	}
